@@ -6,3 +6,10 @@ export const toggleAddModal = (payload) => {
         payload
     }
 }
+
+export const toggleShowCompletedTasks = (payload) => {
+    return {
+        type: actionTypes.toggleShowCompletedTasks,
+        payload
+    }
+}

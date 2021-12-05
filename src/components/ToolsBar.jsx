@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { actionTypes } from '@BLL/actionTypes'
 import { Checkbox } from '@components/Checkbox'
+import { toggleShowCompletedTasks } from '@BLL/actions/interface'
 
 export const ToolsBar = () => {
     const dispatch = useDispatch()
     const isShowCompleted = useSelector((state) => state.showCompleted)
-    const tooleShowCompleted = (checked) => {
-        dispatch({ type: actionTypes.toggleShowCompletedTasks, payload: checked})
+    const tooleShowCompleted = (completed) => {
+        dispatch(toggleShowCompletedTasks(completed))
     }
 
     const calcTasksNumber = () => {
