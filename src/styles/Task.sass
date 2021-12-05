@@ -1,0 +1,28 @@
+@import '@styles/colors'
+
+.Task
+    display: flex
+    justify-content: space-between
+    background-color: $light-blue
+    padding: 7px
+    border-radius: 7px
+    &__Name
+        margin-left: 5px
+        flex-grow: 1
+        padding-left: 5px
+        color: $white
+    &_Hidden
+        display: none
+    &_Completed
+        background-color: $gray
+    &__RemoveButton
+        padding: 0
+        border: 0
+        background: none
+        cursor: pointer
+        color: $white
+        height: 20px
+    &__CompleteCheckbox
+        color: $white
+        .Checkbox__Border
+            border: 2px solid $white
